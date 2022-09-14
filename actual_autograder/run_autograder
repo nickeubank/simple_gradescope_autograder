@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+conda activate grader
+cp /autograder/submission/test_notebook.ipynb /autograder/source/test_notebook.ipynb
+jupyter nbconvert --execute test_notebook.ipynb --to script
+python /autograder/source/run_tests.py
