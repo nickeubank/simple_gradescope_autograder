@@ -4,5 +4,5 @@ import os
 
 if __name__ == "__main__":
     suite = unittest.defaultTestLoader.discover("tests")
-    with open("results/results.json", "w") as f:
+    with open("../results/results.json", "w") as f:
         JSONTestRunner(visibility="visible", stream=f).run(suite)

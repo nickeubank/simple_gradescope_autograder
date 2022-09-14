@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
+export PATH="/root/miniconda3/bin:$PATH"
+source /root/miniconda3/etc/profile.d/conda.sh
+
 conda activate grader
 cp /autograder/submission/test_notebook.ipynb /autograder/source/test_notebook.ipynb
+cd /autograder/source/
 jupyter nbconvert --execute test_notebook.ipynb --to script
 python /autograder/source/run_tests.py

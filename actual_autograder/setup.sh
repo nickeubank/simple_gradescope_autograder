@@ -9,6 +9,9 @@ echo "export PATH=/root/miniconda3/bin:\$PATH" >> /root/.bashrc
 export PATH=/root/miniconda3/bin:$PATH
 
 # install dependencies with conda
+# conda install mamba -n base -c conda-forge
+# mamba env create -f /autograder/source/environment.yml
+
 conda env create -f /autograder/source/environment.yml
 
 # set conda shell
