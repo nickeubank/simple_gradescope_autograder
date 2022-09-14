@@ -13,5 +13,3 @@ conda env create -f /autograder/source/environment.yml
 
 # set conda shell
 conda init --all
-
-pip install gradescope_utils

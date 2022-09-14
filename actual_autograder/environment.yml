@@ -5,6 +5,8 @@ channels:
 dependencies:
     - python=3.10
     - pip
-    - numpy
+    - numpy=1.23.*
     - jupyter
     - nbconvert
+    - pip:
+        gradescope_utils
