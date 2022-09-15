@@ -8,5 +8,6 @@ dependencies:
     - numpy=1.23.*
     - jupyter
     - nbconvert
+    - pytest
     - pip:
-        gradescope_utils
+        - gradescope_utils
