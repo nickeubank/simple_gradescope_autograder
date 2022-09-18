@@ -12,6 +12,6 @@ conda activate grader
 cp /autograder/submission/${exercise_name}.ipynb /autograder/source/${exercise_name}.ipynb
 cd /autograder/source/
 jupyter nbconvert --execute ${exercise_name}.ipynb --to script
-mv ${exercise_name}.ipynb submission_script.py
+mv ${exercise_name}.py submission_script.py
 pytest
 cp /autograder/source/results.json /autograder/results/results.json
