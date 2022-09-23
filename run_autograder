@@ -8,7 +8,11 @@ source /root/miniconda3/etc/profile.d/conda.sh
 # Defines the variable exercise_name with name of exercise.
 source /autograder/source/exercise_name.sh
 
+# Check submission count
 conda activate grader
+python limit_num_submissions.py
+
+# Actually Grade
 cp /autograder/submission/${exercise_name}.ipynb /autograder/source/${exercise_name}.ipynb
 cd /autograder/source/
 jupyter nbconvert --execute ${exercise_name}.ipynb --to script
