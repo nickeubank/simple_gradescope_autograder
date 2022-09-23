@@ -2,7 +2,15 @@
 
 # Get exercise name (which also determines folder name)
 # from user.
+if [ $# -eq 0 ]
+  then
+    echo "No arguments supplied"
+    exit 1
+fi
+
 exercise_name=$1
+
+
 echo $exercise_name
 
 # Copy over fresh copies of files shared by all assignments from root
