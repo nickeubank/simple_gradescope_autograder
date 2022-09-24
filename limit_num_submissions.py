@@ -56,6 +56,12 @@ if count <= SUBMISSION_LIMIT:
 else:
     print(invalid_submission_message)
     last_valid_result = submissions[SUBMISSION_LIMIT - 1]["results"]
-    last_valid_result["output"]
+    last_valid_result["output"] = (
+        "You have exceeding the maximum number "
+        "of submissions. Results shown are from your last valid submission."
+    )
     with open("/autograder/results/results.json", "w") as json_results:
         json_results.write(json.dumps(last_valid_result, indent=4))
+    import sys
+
+    sys.exit(1)

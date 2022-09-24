@@ -15,7 +15,7 @@ python /autograder/source/limit_num_submissions.py
 # Exit if not return code 0 from above
 if [ $? != 0 ];
 then
-    exit
+    exit 0
 fi
 
 # Actually Grade
