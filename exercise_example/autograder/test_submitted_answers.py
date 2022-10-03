@@ -10,13 +10,13 @@ exec(open("submission_script.py").read())
 
 @max_score(1)
 def test_exercise1():
-    if EX1 != solutions["EX1"]:
+    if results["EX1"] != solutions["EX1"]:
         raise IncorrectAnswer("Exercise 1 is incorrect.")
 
 
 @max_score(1)
 def test_exercise2():
-    if EX2 != solutions["EX2"]:
+    if results["EX2"] != solutions["EX2"]:
         raise IncorrectAnswer("Exercise 2 is incorrect.")
 
 
